@@ -15,7 +15,8 @@ console.log(typeof (a()));
 
 // function definition
 
-// method 1
+// method 1 
+// function statement or function declaration
 function a() {
     var x = 100; // x is the local variable we cannot access it outside this function
     console.log(x) //this will print 100
@@ -43,6 +44,17 @@ let const_value = my_function(3, 2);
 console.log(const_value)
 
 
+//named function expression
+var named_func_var = function xyz(){
+    console.log("this is named function expression");
+    console.log(xyz);
+} 
+named_func_var();
+//xyz(); 
+// This will throw an reference error as xyz is in local scope it can be accessed inside the xyz function
+
+
+
 // self invoking functions
 
 // function is self invoked by adding () at the end in function expression
@@ -55,6 +67,19 @@ const func_exp2 = (function (a, b) { console.log(a + b) })(2, 34);
 })();
 
 
+// First class function
+var first_class_var = function (param1) {
+    console.log(param1);
+    return function (){
+        console.log("This function is returned")
+    }
+}
+console.log(first_class_var(function (){
+    console.log("This function is passed as argument")
+}));
+
+
+
 //arrow function 
 // Arrow functions are not hoisted. They must be defined before they are used.
 
@@ -63,7 +88,7 @@ const func_exp2 = (function (a, b) { console.log(a + b) })(2, 34);
 const arr_fun = (a, b) => a / b;
 console.log(arr_fun(23, 5))
 
-
+   
 // closure is the function along with it's lexical environment
 
 //here we can access the grandparent variable inside inner most function
@@ -134,21 +159,17 @@ grandparent();
 
 
 // to get above output closure cabe used 
-function timeout_plus_closure() {
-    for (let i = 1; i < 5; i++) {
-        function close(i) {
-            setTimeout(() => {
-                console.log(i);
-            }, i * 1000);
-        }
-        close(i);
-    }
-    console.log("Hello") // This line will be executed first
-}
-timeout_plus_closure();
-
-
-
-
+// function timeout_plus_closure() {
+//     for (let i = 1; i < 5; i++) {
+//         function close(i) {
+//             setTimeout(() => {
+//                 console.log(i);
+//             }, i * 1000);
+//         }
+//         close(i);
+//     }
+//     console.log("Hello") // This line will be executed first
+// }
+// timeout_plus_closure();
 
 

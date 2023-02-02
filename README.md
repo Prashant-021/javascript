@@ -10,3 +10,16 @@ function name(param1, param2){
 }
 
 function returns a value, if return statement is not used in function then it returns 'undefined by default'
+
+
+Anonymous functions are the function without name.
+They are used when we want a value i.e., when you want to asign value to some variable
+
+
+First Class functions 
+The ability of functions to be used as values and can be passed as argument to another function and return from  function.
+
+Arrow Function
+// Arrow functions are not hoisted. They must be defined before they are used.
+
+// using const instead of var is safer option as function expression is always constant value
