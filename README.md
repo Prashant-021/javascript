@@ -10,11 +10,11 @@ Most of the time, a JavaScript application needs to work with information. To st
 
 variables in Javascript are let, var and const
 
-[var] keyword The var statement declares a function-scoped or globally-scoped variable, optionally initializing it to a value.
+    1. [var] keyword The var statement declares a function-scoped or globally-scoped variable, optionally initializing it to a value.
 
-[let] keyword The let declaration declares a block-scoped local variable, optionally initializing it to a value.
+    2. [let] keyword The let declaration declares a block-scoped local variable, optionally initializing it to a value.
 
-[const] keyword Constants are block-scoped, much like variables declared using the let keyword. The value of a constant can't be changed through reassignment (i.e. by using the assignment operator), and it can't be redeclared (i.e. through a variable declaration). However, if a constant is an object or array its properties or items can be updated or removed.
+    3. [const] keyword Constants are block-scoped, much like variables declared using the let keyword. The value of a constant can't be changed through reassignment (i.e. by using the assignment operator), and it can't be redeclared (i.e. through a variable declaration). However, if a constant is an object or array its properties or items can be updated or removed.
 
 Variable Declarations To use variables in JavaScript, we first need to create it i.e. declare a variable. To declare variables, we use one of the var, let, or const keywords.
 
@@ -30,13 +30,14 @@ There are three scopes 1. Global Scope 2. Function Scope 3. Block Scope
 Data type refers to the type of data that a JavaScript variable can hold. 
 
 There are seven primitive data types in JavaScript 
-1. Number
-2. BigInt
-3. String
-4. Boolean
-5. Null
-6. Undefined 
-7. Symbol. 
+   
+    1. Number
+    2. BigInt
+    3. String
+    4. Boolean
+    5. Null
+    6. Undefined 
+    7. Symbol. 
 
 Objects are non-primitives.
 
@@ -46,20 +47,32 @@ JavaScript object is a data structure that allows us to have key-value pairs; so
 
 The object data type can contain:
 
-1. An object
-2. An array
-3. A date
+    1. An object
+    2. An array
+    3. A date
 
 
 ![image](https://user-images.githubusercontent.com/85476487/215725843-7dd077df-1f7f-41c8-a556-886bf87f4258.png)
 
 4. Functions in JavaScript
 
+Functions are the block of code to perform particulat task.
+They execute when they are called or invoked. 
+To define and declare the function first type "function" keyword followed by function name and then "()" for parameters and arguement. After that in {} bracket statements are present in which required calculation is done
+
+Syntax:- 
+function name(param1, param2){
+    // Code
+}
+
+function returns a value, if return statement is not used in function then it returns 'undefined by default'
+
 5. Asyncronous Javascript
 
 JavaScript program is single threaded and all code is executed in a sequence, not in parallel. In JavaScript asynchrony is handled by using what is called an “asynchronous non-blocking I/O model”. What that means is that while the execution of JavaScript is blocking, I/O operations are not. 
 
 It contains following methods
+    
     1. Callbacks
         A callback is a function passed as an argument to another function.
 
