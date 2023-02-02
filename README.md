@@ -7,7 +7,7 @@ there are two mechanisms to store data
 2. Session storage
     In this storage the data is stored for a particular session only.
 
-Also there is another way to store data which is *cookie*
+Also there is another way to store data which is **cookie storage**
 
 Memory capacity depends on what device you are on and what browser you are using.
 
