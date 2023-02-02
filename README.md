@@ -1,12 +1,6 @@
-Functions in JavaScript
+Closures in Javascript
 
-Functions are the block of code to perform particulat task.
-They execute when they are called or invoked. 
-To define and declare the function first type "function" keyword followed by function name and then "()" for parameters and arguement. After that in {} bracket statements are present in which required calculation is done
+closure is the function along with it's lexical environment
 
-Syntax:- 
-function name(param1, param2){
-    // Code
-}
+In simple words a function nested inside a function has access to the variables declared in the parent function also its grandparent function.
 
-function returns a value, if return statement is not used in function then it returns 'undefined by default'
