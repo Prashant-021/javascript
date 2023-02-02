@@ -54,7 +54,15 @@ The object data type can contain:
 
 ![image](https://user-images.githubusercontent.com/85476487/215725843-7dd077df-1f7f-41c8-a556-886bf87f4258.png)
 
-4. Functions in JavaScript
+
+4. Closures in Javascript
+
+closure is the function along with it's lexical environment
+
+In simple words a function nested inside a function has access to the variables declared in the parent function also its grandparent function.
+
+
+5. Functions in JavaScript
 
 Functions are the block of code to perform particulat task.
 They execute when they are called or invoked. 
@@ -67,7 +75,7 @@ function name(param1, param2){
 
 function returns a value, if return statement is not used in function then it returns 'undefined by default'
 
-5. Asyncronous Javascript
+6. Asyncronous Javascript
 
 JavaScript program is single threaded and all code is executed in a sequence, not in parallel. In JavaScript asynchrony is handled by using what is called an “asynchronous non-blocking I/O model”. What that means is that while the execution of JavaScript is blocking, I/O operations are not. 
 
