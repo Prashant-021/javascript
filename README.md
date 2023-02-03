@@ -23,3 +23,12 @@ Arrow Function
 // Arrow functions are not hoisted. They must be defined before they are used.
 
 // using const instead of var is safer option as function expression is always constant value
+
+
+Higher Order Functions 
+Functions that accepts another function as argument or return another function is known as higher order function.
+
+some of higher order functions are 
+1. map()
+2. filter()
+3. reduce()

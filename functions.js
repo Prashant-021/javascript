@@ -121,6 +121,63 @@ function grandparent() {
 grandparent();
 
 
+//Higher order function
+let radius = [3,2,1,4];
+
+function area(radius){
+    return Math.PI * radius * radius;
+}
+
+function circumference(radius){
+    return 2 * Math.PI * radius;
+}
+
+function diameter(radius){
+    return 2*radius;
+}
+
+function calculate(arr, logic){
+    let output = [];
+    for (let i = 0; i < arr.length; i++) {
+        output.push(logic(arr[i]));
+    }
+    return output;
+}
+
+console.log(calculate(radius,area));
+console.log(calculate(radius,circumference));
+console.log(calculate(radius,diameter));
+
+// custom map function
+console.log("custom map function");
+Array.prototype.calculate = function(logic){
+    let output = [];
+    for (let i = 0; i < this.length; i++) {
+        output.push(logic(this[i]));
+    }
+    return output;
+};
+
+console.log(radius.calculate(area))
+console.log(radius.calculate(circumference))
+console.log(radius.calculate(diameter))
+
+
+console.log("Map ,filter and reduce")
+// map function
+let arr = [5,2,1,6,3]
+
+console.log(arr.map((x) => x*2));
+
+//filter function
+console.log(arr.filter((x) => x%2 != 0))
+
+// reduce funcion
+
+// to find sum
+let output = arr.reduce((acc,curr) => acc += curr, 0);
+console.log(output)
+
 
 
 
