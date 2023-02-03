@@ -178,6 +178,15 @@ console.log(arr.filter((x) => x%2 != 0))
 let output = arr.reduce((acc,curr) => acc += curr, 0);
 console.log(output)
 
+// to find max
+let maxNum = arr.reduce((function (max, curr) {
+    if(curr > max){
+        max = curr;
+    }
+    return max;
+}),0);
+
+console.log(maxNum);
 
 
 
