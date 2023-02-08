@@ -31,4 +31,17 @@ a();
 
 // Eventlisteners are heavy, eventhough they are not in use they occupy the memory.
 //So it is necessary to remove eveent listerner. If not they will slow down the speed of website
+
+
+// callback hell
+let products = ["Shoes", "Bat", "Bottle"];
+
+api.createCart(products, function (){
+    api.proceedToPayment(function (){
+        api.updateWallet();
+    })
+})
+
+// Here in above code there is a callback inside a callback and so on
+// so the issue is to maintain the flow of code and inversion of control i.e, updateWallet api depends on proceedToPayment api to get called
    
