@@ -11,9 +11,9 @@ const getData = () =>{
 
 function debounceFunc(fn , delay) {
     let timer;
-    return function () {
-        clearTimeout(timer);
-        timer = setTimeout(() => {
+    return function () {                            //clearTimeout function is used to cancel the timeout previously established by calling the setTimeout function. 
+        clearTimeout(timer);                        //Here, getData will be executed after 100 milliseconds. 
+        timer = setTimeout(() => {                  //timer will store the integer returned by the setTimeout function.
             fn();
         }, delay);
     }
