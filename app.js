@@ -1,31 +1,3 @@
-// async function asyncfunc(){
-//     const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-//     const data = await response.json();
-//     console.log(data[10]);
-// }
-// asyncfunc();
-
-// const cart = ["Shoes"];
-// async function createOrder(cart){
-//     const result = await validateOrder(cart);
-//     console.log("await");
-//     console.log(result)
-// }
-
-// function validateOrder(cart){
-//     return new Promise setTimeout(() => {
-//         console.log("success");
-//     }, 3000);
-// }
-
-// createOrder()
-
-// async function f(){
-//     return Promise.resolve(1);
-
-// }
-
-
 console.log("Async/Await");
 
 async function asyncfunc(){
