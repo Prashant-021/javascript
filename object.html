@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj1 = {
+            name: "Prashant",
+            age: 21
+        }
+        let obj2 = {
+            name: "Prashant",
+            age: 21
+        }
+        console.log(obj1, obj2);
+        console.log(obj1 === obj2);
+        console.log(obj1 == obj2);
+        console.log(obj1.name == obj2.name);
+        console.log(Object.keys(obj1)==Object.keys(obj2));
+        console.log(Object.values(obj1));
+        console.log(Object.values(obj1)==Object.values(obj2));
+        
+
+        (function test(){
+            let a = b = 3;
+        })();
+
+        let str = "hello world";
+        console.log( str.charAt(2));
+        for(const char in str) {
+            console.log(char);
+        }
+        for(const char of str) {
+            console.log(char);
+        }
+        let array = [1, 22, 3];
+
+        array.forEach(element => {
+            console.log(element);
+        });
+        console.log(array.includes(22))
+        console.log(array.includes('22'))
+        console.log(typeof(array.join()));
+        let str1 = array.join();
+        console.log(str1.replace(',',""));
+        console.log(str1.replaceAll(','," & "));
+    </script>
+</body>
+</html>

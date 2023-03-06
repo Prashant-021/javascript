@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // que 115
+
+        const myMap = new Map();
+        const myFunc = () => 'greeting';
+
+        myMap.set(myFunc, 'Hello world!');
+
+        //1
+        console.log(myMap.get('greeting'));
+        //2
+        console.log(myMap.get(myFunc));
+        //3
+        console.log(myMap.get(() => 'greeting'));
+
+
+        myMap.set(myFunc, 'how are you?');
+        console.log(myMap.get(myFunc));
+
+
+        let map1 = new Map()
+        console.log(map1)
+        console.log(map1.get('a'))
+        map1.set('a', "Hello")
+        map1.set('a', "Hellodfsg")
+        console.log(map1.get('a'))
+        console.log(map1)
+
+        // que 116
+        const person = {
+            name: 'Lydia',
+            age: 21,
+        };
+
+        const changeAge = (x = { ...person }) => (x.age += 1);
+        const changeAgeAndName = (x = { ...person }) => {
+            x.age += 1;
+            x.name = 'Sarah';
+        };
+
+        changeAge(person);
+        console.log(person);
+        changeAgeAndName(person);
+
+        console.log(person);
+
+    </script>
+</body>
+
+</html>

@@ -1,14 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Concepts</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <h1>JavaScript Learning</h1>
 
+<body>
+
+    <h1>Javascript Learning</h1>
+    <h2>InnerHrml</h2>
+    <button id="btn" type="button" onclick="document.getElementById('demo').innerHTML =Date()">Click me</button>
+    <p id="demo"></p>
+    <script src="./app.js"></script>
+    <hr>
+
+    <h2>Img src</h2>
+
+    <button onclick="document.getElementById('myimg').src='plus_sign.png'">
+        turn on
+    </button>
+    <img id="myimg" src="stopwatch.png" width="150px" height="150px">
+    <button onclick="document.getElementById('myimg').src='stopwatch.png'">
+        turn off
+    </button>
+
+    <button onclick="document.getElementById('myImage').src='stopwatch.png'">Turn on the light</button>
+
+    <img id="myImage" src="stopwatch.png" style="width:100px">
+
+    <button onclick="document.getElementById('myImage').src='plus_sign.png'">Turn off the light</button>
+
+    <hr>
+    <h2>changing style</h2>
+    <div id="box">
+        this is box
+    </div>
+    <button id="changecolor" onclick=changeColor()>
+        click me
+    </button>
+    <hr>
+    <h3>Fontsize</h3>
+    <button onclick=increasefont()>
+        Increase
+    </button>
+    <button onclick="decreasefont()">
+        decrease
+    </button>
+    <div class="textarea" id="text-box">
+        sample font
+    </div>
+    <hr>
+    <h3>Print page</h3>
+    <button onclick=printfun()>
+        Print
+    </button>
+    <hr>
+    <h3>Var value</h3>
+    <p id="valueinside"></p>
+    <hr>
+
+
+
+
+    <script>
+
+        var Name = 'Prashant';
+        var Name = 'Prashant Patel';
+        document.getElementById('valueinside').innerHTML = Name;
+
+
+        const person = {
+            name: "Prashant",
+            birthyear: 2001,
+            country: 'India',
+            language: {
+                lang1: 'English',
+                lang2: 'Gujarati'
+            },
+            age: function myage() {
+                const d = new Date();
+                let year = d.getFullYear();
+                return year - this.birthyear
+            }
+        }
+        console.log(person.language.lang2)
+    </script>
 </body>
+
 </html>

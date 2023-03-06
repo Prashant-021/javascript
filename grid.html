@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="inputNumber">
+    <button onclick="createGrid()">Click</button>
+    <div id="mainContainer">
+    </div>
+    <!-- <script>
+        const mainContainer = document.getElementById("mainContainer");
+        let innerDiv = document.createElement("div");
+        innerDiv.innerHTML = "12";
+        mainContainer.appendChild(innerDiv);
+
+    </script> -->
+    <script>
+        function createGrid() {
+            const mainContainer = document.getElementById("mainContainer");
+            let rowCols = Number(document.getElementById("inputNumber").value);
+            mainContainer.innerHTML = ""
+            mainContainer.style.cssText = `
+            background-color: aqua;
+           
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(${rowCols}, 30px);
+            grid-template-rows: repeat(${rowCols}, 30px);`
+            for (let i = 0; i < (rowCols * rowCols); i++) {
+                let innerDiv = document.createElement("div");
+                innerDiv.innerHTML = "12";
+                innerDiv.style.cssText = `
+                    background-color:green;
+
+                    `
+                mainContainer.appendChild(innerDiv);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
