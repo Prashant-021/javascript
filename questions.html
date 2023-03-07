@@ -29,6 +29,7 @@
         myMap.set(myFunc, 'how are you?');
         console.log(myMap.get(myFunc));
 
+        // pracitse
 
         let map1 = new Map()
         console.log(map1)
@@ -51,10 +52,24 @@
         };
 
         changeAge(person);
+        
         console.log(person);
+        
         changeAgeAndName(person);
 
         console.log(person);
+
+        // practise
+        function restparameter(...args) {
+            let total = 0;
+            for (const arg of args){
+                console.log(arg);
+                total += arg
+            }
+            return total
+        }
+
+        console.log(`Total: ${restparameter(1,45,2)}`);
 
     </script>
 </body>
