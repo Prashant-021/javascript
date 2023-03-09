@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        console.log("Destructuring")
+        console.log("Array Destructuring")
+        
+        const nums = [1,2,3]
+        const [num1, , num3] = nums
+        console.log(num3)
+        
+        console.log("Object Destructuring")
+
+        const vehicle = {
+            brand: 'Ford',
+            year: 2011,
+            model: 'Mustang',
+        }
+        vehicleInfo(vehicle)
+
+        function vehicleInfo({brand, year}) {
+            console.log(brand,year);
+        }
+    </script>
+</body>
+</html>
