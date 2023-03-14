@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        div {
+            padding: 30px;
+            background-color: green;
+        }
+
+        span {
+            padding: 20px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Event Bubbling</h1>
+    <p>This is the concept of DOM in which when an event is triggred
+        the <strong>event Bubbles up</strong> action propogates to it's <strong> parent element until it reaches
+            to root </strong>element.
+    </p>
+
+    <div>
+        <span>
+            <button>ClickMe</button>
+        </span>
+    </div>
+    <p>
+        The "Event Bubbling" behavior makes it possible for you to handle an event in a parent element instead of the
+        actual
+        element that received the event.
+    </p>
+    <p>
+        The pattern of handling an event on an ancestor element is called Event Delegation.
+        Using this event listeners can be reduces.
+    </p>
+
+    <div id="div2">
+        <button id="btn1">Button 1</button>
+        <button id="btn2">Button 2</button>
+        <button id="btn3">Button 3</button>
+        <button id="btn4">Button 4</button>
+        <button id="btn5">Button 5</button>
+    </div>
+    <script>
+        const Body = document.getElementsByTagName('body')[0]
+        const div = document.getElementsByTagName('div')[0]
+        const span = document.getElementsByTagName('span')[0]
+        const button = document.getElementsByTagName('button')[0]
+
+        Body.addEventListener("click", () => {
+            console.log("body clicked")
+        })
+        div.addEventListener("click", () => {
+            console.log("div clicked")
+        })
+        span.addEventListener("click", () => {
+            console.log("span clicked")
+        })
+        button.addEventListener("click", () => {
+            console.log("button clicked")
+        })
+
+        //Tradinationally adding click event to buttons
+        // const btn1 = document.getElementById("btn1")
+        // const btn2 = document.getElementById("btn2")
+        // const btn3 = document.getElementById("btn3")
+        // const btn4 = document.getElementById("btn4")
+
+        // btn1.addEventListener('click', ()=>{
+        //     console.log(btn1.innerHTML)
+        // })
+        // btn2.addEventListener('click', ()=>{
+        //     console.log(btn2.innerHTML)
+        // })
+        // btn3.addEventListener('click', ()=>{
+        //     console.log(btn3.innerHTML)
+        // })
+        // btn4.addEventListener('click', ()=>{
+        //     console.log(btn4.innerHTML)
+        // })
+
+        //but number of event listener increases as button increases
+        // to reduce event listeners event bubbling and event delegation can be used
+
+        const div2 = document.getElementById("div2")
+
+        div2.addEventListener('click',(event)=>{
+            
+            if(event.target.tagName === 'BUTTON'){
+                console.log(event.target.innerText)
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
