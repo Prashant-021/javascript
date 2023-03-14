@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+    <style>
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Generator Function</h1>
+    <p>A generator-function is defined like a normal function, but whenever it needs to <strong> generate a
+            value</strong>, it does so
+        with the <strong>yield</strong> keyword rather than return. The yield statement <strong> suspends the function’s
+            execution</strong> and sends a
+        value back to the caller, but retains enough state to enable the function to resume where it is left off. When
+        resumed, the function continues execution immediately after the last yield run. </p>
+
+    <p> Generator-Object : Generator functions return a generator object. Generator objects are used either by calling
+        the
+        next method on the generator object or using the generator object in a “for of” loop (as shown in the above
+        program)
+        The Generator object is returned by a generating function and it conforms to both the iterable protocol and the
+        iterator protocol.</p>
+    <script>
+        console.log("Generator");
+        let arr = [10, 23, 34]
+
+        function* generate() {
+            yield 10;    // Executions stops and returns immediately
+            yield 20;
+            yield* arr;
+            yield 40;
+
+        }
+        let func = generate();
+        console.log(func.next().value); // prints 10
+        console.log(func.next().value); // prints 20
+        console.log(func.next().value); // prints 10
+        console.log(func.next().value); // prints 23
+        console.log(func.next().value); // prints 34
+        console.log(func.next().value); // prints 40
+        console.log(func.next().value); // prints undefined
+
+        function* naturalNo() {
+            let i = 1;
+
+            while (true) {
+                yield i++; //
+            }
+        }
+        let func1 = naturalNo();
+        for (let i = 0; i < 10; i++) {
+            console.log(func1.next().value); // prints
+        }
+
+        function* yieldAndReturn() {
+            yield 42;
+            return 10;
+            yield "end";
+        }
+        let func2 = yieldAndReturn();
+        console.log(func2.next().value); // prints
+        console.log(func2.next().value); // prints
+        console.log(func2.next().value); // prints undefined
+    </script>
+
+</body>
+
+</html>
