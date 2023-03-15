@@ -5,15 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destructuring</title>
+    <style>
+        p{
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
+    <h1>Destructuring</h1>
+    <p>
+        This is the concept of accessing the array items individually
+        in form of variables.
+    </p>
+    <p>
+        In technical terms, Destructuring assignment syntax is a js expression that makes it
+        possible to <strong>unpack values</strong> from arrays , or properties from objects, 
+        into <strong>distinct variables</strong>
+    </p>
     <script>
         console.log("Destructuring")
         console.log("Array Destructuring")
         
         const nums = [1,2,3]
         const [num1, , num3] = nums
-        console.log(num3)
+        console.log(num1)
+        
+        const [a = aDefault,b] = nums
+        console.log(a);
         
         console.log("Object Destructuring")
 
@@ -27,6 +45,16 @@
         function vehicleInfo({brand, year}) {
             console.log(brand,year);
         }
+
+        
+        const obj1 = {
+            a:12
+        }
+        const obj2 = {
+            a:11
+        }
+
+
     </script>
 </body>
 </html>
