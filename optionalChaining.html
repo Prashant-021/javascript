@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Chaining</title>
+</head>
+<body>
+    <h1>Optional Chaining</h1>
+    <p>
+        Optional chaining <strong> (?.) </strong>is similar to chaining operator(.), it accesses the object property 
+        or call a function. But if the object property does not exist(undefined or null) then
+        then the expression short circuits and evaluates to undefined instead of throwing an error.
+    </p>
+    <p>
+        when using chaining operator it throws an error if the object property or function is 
+        undefined or null. So optional chaining checkes whether the property or function called is 
+        defined or not, and if not then the undefined is returned and the execution continues.
+    </p>
+    <script>
+        console.log("Optional Chaining");
+        const obj1 = {
+            name:"prashant",
+            fullName: {
+                name: "Patel Prashant"
+            }
+        }
+        console.log(obj1.full?.age);        // This will return undefined 
+        console.log(obj1.fullName.name); 
+        console.log(obj1.full.age);         // This will throw TypeError as full is not defined 
+    </script>
+
+</body>
+</html>
