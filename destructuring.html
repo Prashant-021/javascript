@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destructuring</title>
     <style>
-        p{
+        p {
             text-align: justify;
         }
     </style>
 </head>
+
 <body>
     <h1>Destructuring</h1>
     <p>
@@ -19,20 +21,32 @@
     </p>
     <p>
         In technical terms, Destructuring assignment syntax is a js expression that makes it
-        possible to <strong>unpack values</strong> from arrays , or properties from objects, 
+        possible to <strong>unpack values</strong> from arrays , or properties from objects,
         into <strong>distinct variables</strong>
+    </p>
+
+    <h1>Rest operator</h1>
+    <p>
+        The rest parameter syntax allows a function to accept an <strong>indefinite number of arguments as an array</strong>, providing a
+        way to represent variadic functions in JavaScript.
+    </p>
+    <h1>Spread operator</h1>
+    <p>
+        The spread (...) syntax allows an iterable, such as an array or string, to be expanded in places where zero or
+        more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the
+        spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.
     </p>
     <script>
         console.log("Destructuring")
         console.log("Array Destructuring")
-        
-        const nums = [1,2,3]
+
+        const nums = [11, 2, 3]
         const [num1, , num3] = nums
         console.log(num1)
-        
-        const [a = aDefault,b] = nums
+
+        const [a = aDefault, b] = nums
         console.log(a);
-        
+
         console.log("Object Destructuring")
 
         const vehicle = {
@@ -42,19 +56,40 @@
         }
         vehicleInfo(vehicle)
 
-        function vehicleInfo({brand, year}) {
-            console.log(brand,year);
+        function vehicleInfo({ brand, year }) {
+            console.log(brand, year);
         }
 
-        
-        const obj1 = {
-            a:12
+        // Rest operator
+        function restAdd(...args) {
+            let sum = 0;
+            args.forEach(element => {
+                // console.log(element);
+                sum += element
+            });
+
+            args.map((ele) => {
+                console.log(ele);
+            })
+            return sum
         }
-        const obj2 = {
-            a:11
+        console.log(restAdd(1, 2, 113))
+
+        //spread operator
+        function spreadAdd(num1, num2, num3) {
+            return num1 + num2 + num3;
         }
+        console.log(spreadAdd(...[21, 32, 12]));
+        console.log(spreadAdd(...["Pra", "sha", "nt"]));
+
+        const arr3 = [12, 12, 342]
+        const obj = { ...arr3 }  //This will create key value pair with array elements
+        const obj1 = { arr3 }    //This will create a single key value pair with key as arr3 and value as whole array
+        console.log(obj);
+        console.log(obj1);
 
 
     </script>
 </body>
+
 </html>
