@@ -42,7 +42,7 @@
 
         const nums = [11, 2, 3]
         const [num1, , num3] = nums
-        console.log(num1)
+        console.log(num3)
 
         const [a = aDefault, b] = nums
         console.log(a);
@@ -79,7 +79,8 @@
         function spreadAdd(num1, num2, num3) {
             return num1 + num2 + num3;
         }
-        console.log(spreadAdd(...[21, 32, 12]));
+        let arr4 = [21, 32, 12]
+        console.log(spreadAdd(...arr4));
         console.log(spreadAdd(...["Pra", "sha", "nt"]));
 
         const arr3 = [12, 12, 342]
@@ -87,6 +88,18 @@
         const obj1 = { arr3 }    //This will create a single key value pair with key as arr3 and value as whole array
         console.log(obj);
         console.log(obj1);
+
+        const obj3 = {
+            a: 10,
+            b: 11
+        }
+        const obj4 = {
+            c: 2,
+            d: 11
+        }
+        const obj5 = {obj3,obj4}
+        // const obj5 = obj3
+        console.log(obj5);
 
 
     </script>
