@@ -12,22 +12,22 @@
     <h1>
         Features introduced in es6
     </h1>
-    <ul>
-        <li>The let keyword</li> 
-        <li>The const keyword</li> 
-        <li>Arrow Functions</li> 
-        <li>The ... Operator</li> 
-        <li>For/of</li> 
+    <ol>
+        <li>The let keyword</li>
+        <li>The const keyword</li>
+        <li>Arrow Functions</li>
+        <li>The ... Operator</li>
+        <li>For/of</li>
         <li>Map Objects</li>
         <li>Set Objects</li>
-        <li>Classes</li> 
-        <li>Promises</li> 
+        <li>Classes</li>
+        <li>Promises</li>
         <li>Symbol</li>
-        <li>Default Parameters</li> 
-        <li>Function Rest Parameter</li> 
-        <li>String.includes()</li> 
-        <li>String.startsWith()</li> 
-        <li>String.endsWith()</li> 
+        <li>Default Parameters</li>
+        <li>Function Rest Parameter</li>
+        <li>String.includes()</li>
+        <li>String.startsWith()</li>
+        <li>String.endsWith()</li>
         <li>Array.from()</li>
         <li>Array keys()</li>
         <li>Array find()</li>
@@ -38,15 +38,29 @@
         <li>New Global Methods</li>
         <li>Object entries</li>
         <li>JavaScript Modules</li>
-    </ul>
+    </ol>
 
     <script>
         const fruits = new Map([
-            ["apple",100],
+            ["apple", 100],
             ["bananas", 200],
             ["Apple", 300]
         ])
         console.log(fruits.get("Apple"));
+
+        let text = "Hello world, welcome to the universe.";
+        console.log(text.includes("world"))
+        console.log(text.includes("worlds"))
+        
+        console.log(text.startsWith("Hello"))
+        console.log(text.startsWith("aHello"))
+        
+        console.log(text.endsWith("universe."))
+        console.log(text.endsWith("universe"))
+
+        
+
+
     </script>
 </body>
 
