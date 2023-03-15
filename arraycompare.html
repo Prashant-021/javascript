@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Given two arrays A and B of equal size N, the task is to find if given arrays are equal or not. Two arrays are said
+    to be equal if both of them contain same set of elements, arrangements (or permutation) of elements may be different
+    though.
+    Note : If there are repetitions, then counts of repeated elements must also be same for two array to be equal.
+    <script>
+        function check(A, B, N) {
+            // code here
+            console.log(A.sort(function (a, b) { return a - b }))
+            console.log(B.sort(function (a, b) { return a - b }))
+            let a1 = A.sort(function (a, b) { return a - b })
+            let b1 = B.sort(function (a, b) { return a - b })
+            console.log(typeof(a1));
+            for (let index = 0; index < N; index++) {
+                if(b1[index] === a1[index]){
+                    console.log(true)
+                }
+                else{
+                    console.log(false)
+                }
+                
+            }
+        }
+
+        check([1, 22, 5, 4, 0], [0, 4, 5, 1, 2], 5)
+    </script>
+</body>
+
+</html>
